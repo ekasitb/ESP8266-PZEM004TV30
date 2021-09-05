@@ -6,11 +6,9 @@
 
 #define LINE_TOKEN  "xxxx"
 
-
 PZEM004Tv30 pzem1(4, 5); // Rx, Tx
 PZEM004Tv30 pzem2(2, 0); // Rx, Tx
 PZEM004Tv30 pzem3(13, 12); // Rx, Tx
-
 
 char ssid[] = "xxxxx";
 char pass[] = "xxxxx";
@@ -109,7 +107,6 @@ void loop() {
   //  testPrint();
 
 
-
   Blynk.run();
   //------sent data to blynk------
 
@@ -129,6 +126,7 @@ void loop() {
   Blynk.virtualWrite(V14, energy1);
   Blynk.virtualWrite(V15, frequency1);
   Blynk.virtualWrite(V16, pf1);
+  Blynk.virtualWrite(V17, va1);
 
   Blynk.virtualWrite(V21, voltage2);
   Blynk.virtualWrite(V22, current2);
@@ -136,6 +134,7 @@ void loop() {
   Blynk.virtualWrite(V24, energy2);
   Blynk.virtualWrite(V25, frequency2);
   Blynk.virtualWrite(V26, pf2);
+  Blynk.virtualWrite(V27, va2);
 
   Blynk.virtualWrite(V31, voltage3);
   Blynk.virtualWrite(V32, current3);
@@ -143,6 +142,7 @@ void loop() {
   Blynk.virtualWrite(V34, energy3);
   Blynk.virtualWrite(V35, frequency3);
   Blynk.virtualWrite(V36, pf3);
+  Blynk.virtualWrite(V37, va3);
 
 
   //--------Line Notification
